@@ -9,7 +9,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import java.util.EnumSet;
 
-public class MySpringMvcDispatcherServletInitializere extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class MySpringMvcDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return null;

@@ -7,9 +7,9 @@
 <body>
 
 <form th:method="PATCH" th:action="@{/books/{id}(id=${book.getBook_id()})}" th:object="${book}">
-    <label for="book_name">Введите название книги: </label>
-    <input type="text" th:field="*{book_name}" id="book_name"/>
-    <div style="color:red" th:if="${#fields.hasErrors('book_name')}" th:errors="*{book_name}">Name Error</div>
+    <label for="bookName">Введите название книги: </label>
+    <input type="text" th:field="*{bookName}" id="bookName"/>
+    <div style="color:red" th:if="${#fields.hasErrors('bookName')}" th:errors="*{bookName}">Name Error</div>
     <br/>
     <label for="author">Введите автора: </label>
     <input type="text" th:field="*{author}" id="author"/>

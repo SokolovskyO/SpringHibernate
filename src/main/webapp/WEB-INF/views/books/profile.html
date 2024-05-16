@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<p th:text="${book.getBook_name() + ', ' + book.getAuthor() + ', ' + book.getBook_year()}">VALUE</p>
+<p th:text="${book.getBookName() + ', ' + book.getAuthor() + ', ' + book.getYear()}">VALUE</p>
 
 <div th:if="${owner}">
     <span>Книга сейчас у: </span> <span th:text="${owner.getFull_name()}">Person Name</span>
@@ -17,7 +17,7 @@
 </div>
 
 <div th:if="${people}">
-    <form th:method="PATCH" th:action="@{/books/{id}/add(id=${book.getBook_id()})}">
+    <form th:method="PATCH" th:action="@{/books/{id}/add(id=${book.getBook_id()})}" th:object="${book}">
         <label for="person">Эта книга свободна. Кому назначить ее?</label>
         <br/>
         <select th:object="${person}" th:field="*{id}" id="person">
